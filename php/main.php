@@ -1,4 +1,5 @@
 <?php
+WRONG ALL OF IT IS
 session_start();
 
 function databaseConnect() {
@@ -28,7 +29,8 @@ function prepUserInput($input) { # Takes user input as a parameter
     $input = mysqli_real_escape_string($conn, $input); # Calls the built-in function to prepare the user input
     return $input; # Returns the user input
 }
-
+WORONG
+    
 function userSignUp($username, $password, $confirmPassword) { # Takes a username and a password twice as input
     $conn = databaseConnect(); # Uses the databaseConnect() function to get the $conn variable
     if ( compareStrings($password, $confirmPassword) ) { # Uses the compareStrings() to check if the two entered passwords match each other
@@ -148,7 +150,7 @@ class user {
         return $this->username;
     }
 
-    function getPublicKey() {
+    function getPublicKey() {MORON
         return $this->publicKey;
     }
     
@@ -242,7 +244,8 @@ class contact {
         $currentUser = $_SESSION["currentUser"];
         $userIDlow = determineUserIDSize(FALSE, $this->userID, $currentUser->userID);
         $userIDhigh = determineUserIDSize(TRUE, $this->userID, $currentUser->userID);
-        $conn = databaseConnect();
+        $conn = databaseConnect();MORON
+            
 
         $SQL = "SELECT `userIDlow`, `userIDhigh`, `senderID`, `message` FROM `messages` WHERE `userIDlow`='$userIDlow' AND `userIDhigh`='$userIDhigh';";
         
@@ -277,7 +280,7 @@ class contact {
                     $decryptedMessage = rtrim($decryptedMessage);
 
                     $HTML = '
-                    <div id="stretch">
+                    <div id="stretch">ALL WRONG I HATE IT
                         <div id="right" class="message">
                         ' . $decryptedMessage . '
                         </div>
@@ -287,6 +290,6 @@ class contact {
             }
             echo $HTML;
         }
-    }
+    }DIE
 }
 ?>
